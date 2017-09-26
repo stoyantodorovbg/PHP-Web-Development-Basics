@@ -1,0 +1,191 @@
+PHP Basic Syntax - Lab
+This document defines a set of tasks to be done as a part of the PHP Basic Syntax lecture’s exercises. 
+Part I: Play with PHP
+This first part will walk you through the PHP’s basic syntax by making you solve some logical basic tasks. This is very important before going to build web applications. Please, be patient.
+1.	Calculate Two Numbers
+You will first start using PHP in CLI mode (console application). This means you will receive user input through the standard input and will return result into the standard output.
+PHP, like most of the modern languages, supports argument passing on application start as well as waiting for user input.
+Now we need to read the standard input. PHP relies heavily on streams (maybe as heavy as Java does). We can read a line from a resource handle by using the function fgets(). It might be usual for files, but other streams are also acceptable, thus we can pass the STDIN to it. 
+ 
+There are two possible problems here. If we need to read a text, we will receive the line terminating symbols as part of the variable contents. We can trim them safely. As we read numbers, we can just cast or convert to number, which will remove the redundant extra symbols.
+ 
+To read the second number, we need to read the second line as well
+ 
+Now we need to build our logic. Keep in mind that no matter if you output to a web page or to the CLI, you can use “echo” construction.
+ 
+Let’s try our program now:
+ 
+
+2.	Find Largest of Three Numbers
+You are given three numbers from the standard input each on new line. Print on standard output the string “Max: “, followed by the largest number e.g. “Max: 4”.
+Let’s find the largest number amongst the first and the second. Let’s assume that the first number is the largest. 
+ 
+If the second is larger than the first, assign $largestFromOneTwo the value of $numberTwo.
+ 
+Now the largest amongst all the numbers is the largest amongst the first two numbers and the third number
+ 
+Cool! It’s ready! 
+Of course there’s a built-in function that finds max numbers between two numbers and it has the same performance as if/else, so we will not kill the performance if we use it.
+ 
+3.	Find Largest from Undefined Count of Numbers
+You need to read numbers (the numbers will be in range [1, 2^31]) from the standard input until receiving empty string and find the maximum number amongst them. Print it to the standard output as in Task 2 (Max: n).
+
+First of all, if we don’t know the exact count of the lines we will receive, we cannot use a deterministic loop like “for” loop (or at least not in the conventional scenario of a for loop). We can use a “while” loop, and once we receive an empty string to break out from the loop:
+ 
+Or we can simplify it relying on three rules:
+1.	While loop exits once the condition is falsy (empty string, 0, false, null…)
+2.	We will never receive 0 because of the range [1, 2^31].
+3.	The assignation process still produces output and it’s not void (as in Java/C#)
+ 
+
+We can put all the numbers in an array and use the built-in utility function that finds max number in an array.
+ 
+And it will most probably work. The solution is elegant, yet not so fast. 
+The problem here is that we are iterating through a set of input and then the built-in function iterates over the array to find the largest number. If we receive 5000 numbers, we will make 2x5000 = 10 000 iterations. It might be crucial to the performance. So we need to optimize it.
+Why don’t we search for the largest number at the same time we are reading the input? Comparing each number to the last largest number found. Once we are done reading the input we will have the largest number found.
+ 
+Or simply:
+ 
+
+
+4.	Largest Number Again
+Having in mind the considerations in the Task 3, find the largest number, but this time the input numbers might contain negatives. 
+Examples
+Input	Output		Input	Output
+3
+7
+-4
+5	Max: 7		-3
+-2
+-17
+-33
+-1	-1
+5.	Count Letters
+You will receive a single line from the standard input containing a word (or at least a set or characters). You need to print on the standard input how many times each letter is found in order of the letter appearance, in format {letter} -> {times}
+Input	Output		Input	Output
+apple	a -> 1
+p -> 2
+l -> 1
+e -> 1		appearance	a -> 3
+p -> 2
+e -> 2
+r -> 1
+n -> 1
+c -> 1
+
+An associative array is good for this purpose. It can keep each letter as a key and the times it has appeared as value. When you find a letter for first time, set its value to 0. This will ensure you will never try to increment non-existing keys. The main logic then will be “increment the value by that key in the array”. If it was just found, it will be 0 and incrementing it will become 1 (finding letter for first time means exactly that – it has occurred 1 time). If it was found before it will increment the old value e.g. from 1 to 2
+ 
+Read about strlen() function in order to iterate over a string.
+
+
+
+
+
+6.	Count Letters – Sorted
+As in Task 5, but the output should be sorted by the times a letter has occurred in descending order, then in order of appearance.
+Input	Output		Input	Output
+apple	p -> 2
+a -> 1
+l -> 1
+e -> 1		appearance	a -> 3
+p -> 2
+e -> 2
+r -> 1
+n -> 1
+c -> 1
+
+Read about sorting an array. Choose the appropriate function (or you will have headache with the keys).
+Part II: Try the Web
+So far you might have understood how PHP’s I/O works. Once a WEB Server receives a request and needs to dispatch it to the PHP parser it carefully prepares the environment eligible for WEB development. One of the core problems is how to pass a user input to a PHP file, when it’s part of the WEB Environment. The HTTP Standard defines some Request ways. One of them is the query string and the another is the FORM data.
+We will discuss the form data later, and stick to the query string right now.
+The query string is all that part you might have already seen after the question mark in the address bar. For instance, http://site.com/script.php?name=john&last_name=smith has a query string, namely: “name=john&last_name=smith”.
+A part of the environment preparation is converting the query string to key/value pairs. You can find in the $_GET superglobal variable an associative array containing “name” as key and “john” as its value. Same applies for “last_name” and “smith”. 
+The query string can be manually filled as in the above example or generated from FORM submission with method GET.
+A Form is an HTML element that contains a fieldset with name/value pairs e.g. text fields, dropdowns, checkboxes and so forth. After the form is submitted the values of the fields are sent (along with their name attribute as keys) either as form data or query string depending on the “method” attribute of the form tag. The default method is “GET” which produces a query string. 
+1.	Calculate Two Numbers
+CLI is gone. No console anymore. We need a web interface. So let’s define one:
+ 
+From the above web page, a user can choose an operation between Sum and Subtract from a dropdown, then enter 2 numbers in text fields and could click “Calculate!” button.
+What we need to achieve is to take that input and perform the logical calculation.
+Let’s see how the above web interface could be as HTML code:
+ 
+It defines a FORM with method GET (the method can be omitted, as GET is the default). The fieldset in the form is as follows: 
+•	Dropdown named “operation” with values either “sum” or “subtract”
+•	Text field “number_one” with user value
+•	Text field “number_two” with user value
+•	Submit button
+This means that after the form submission the key “operation” will be in the $_GET superglobal with value either “sum” or “subtract” (to be honest, people can modify it, but we will talk about it later), as well as for “number_one” and “number_two”.
+Let debug the $_GET superglobal and open our PHP file in the web browser
+ 
+ 
+Let’s populate the form and click Calculate
+ 
+Everything seems OK, so we can now take the input from the $_GET superglobal and create our logic
+
+First of all, we need to make the calculation only when the submit button is clicked. We can determine that by the presence of its key in the $_GET superglobal.
+ 
+In the conditional statement body, we can now perform the core logic
+ 
+And the output of the previous input is:
+ 
+Whooila!
+1.1.	Code Quality
+What if we want to output the result not prefixed by “==” but by a single bullet and in red color? Well, it’s not that hard. We just need to output the relevant HTML and the Web Browser will render it
+ 
+And its respective output:
+ 
+Good, eh? But some of our HTML is wrapped in quotes, mixed in the PHP logic, making it harder to maintain. It’s not a single <li>, but what if it’s the whole of your Facebook wall, with all the images, styles and videos? What if we want to output it to another text field (readonly) after the Number 2 field?
+ 
+Well, we can write it that way:
+ 
+But now it’s totally unmaintainable, with string concatenations and embedding big PHP logic between the HTML presentation. 
+The solution is called Separation of Concerns.
+Never mix HTML and PHP! Separate the logic and the HTML and only add PHP to the HTML when you need to output value, not whole dynamic HTML.
+Let’s create a PHP file that handles the $_GET request and renders the HTML. Using the “include” construction, one can embed one file’s content in another file.
+So our files might be called:
+•	calculator.php
+•	calculator_frontend.php
+
+calculator.php:
+ 
+Assigns output to the $output variable and includes the content of the calculator_fronend file, which should contain the HTML.
+calculator_frontend.php:
+ 
+As you can see, we have opened PHP only for conditional statement and for echo statement. Once to check if $output is set and once to print the value of $output variable inside the HTML’s value attribute.
+The output is just the same:
+ 
+2.	Render Students Info
+You are given an HTML form that contains three input fields. The first one is a dropdown containing delimiters (“,”, “|”, “&”). The second one containing student names separated by the selected delimiter. The third one – student ages separated by the selected delimiter.
+  
+With the following HTML
+ 
+You need to output an HTML table with headers “Name” and “Age” and each student as a row in this table
+ 
+1.	Separate the HTML and the PHP
+2.	Split the input from Names and Ages by the selected delimiter
+3.	Render a table only if names and ages arrays are initialized
+4.	Use foreach/endforeach or for/endfor to introduce new table rows
+ 
+3.	Filter Legal Students
+From the above task, render the HTML table only with these students are at least 18 years old.
+4.	* Paginate Students
+Render max 5 students per page and two hyperlinks under the table – “Previous” and “Next”. The “Previous” hyperlink should not exist when there are no previous pages (e.g. we are on the first page) and the “Next” hyperlink should not exist when there are no next pages (e.g. when we are on the last page).
+After clicking on “Next” hyperlink, the next chunk of 5 students is rendered. After clicking on “Previous” the previous chunk of 5 students is rendered.
+HINT: Consider persisting the students’ collection between requests, you may send it back with the GET request not-preferable, but is the only one taught so far) or persist it in a session/cookie (or even a file).
+5.	** Paginate Students (2)
+Decorate more the last task. Between the hyperlinks “Previous” and “Next” render hyperlinks with pages. Display exactly 3 hyperlinks with pages. But be careful! In some ways there might not be 3 pages until the end of the collection, so you need to render the previous pages. The only exception of the rule is when there aren’t 3 pages at all.
+For instance, if we have 16 students, we will need 4 pages. This means on the first request we will render:
+ [1] [2] [3] [Next]  
+The red color means the page is the current page and cannot be clicked
+The green color means the page is available for clicking
+When clicking on “Next” or “2” the pager will be like:
+[Previous] [2] [3] [4] [Next]
+But when clicking on “3” there is no fifth page, so in order the slider to show exactly 3 pages, we need to make it remain the same way, just make “2” clickable in favor of “3”:
+[Previous] [2] [3] [4] [Next]
+The next step is to go to the last page. Clicking on “4” will make the slider look like:
+[Previous] [2] [3] [4]
+
+The exception of the rule is when we have for example 9 students. The only thing we can do here is to render 2 pages (which is normal, no results for 3 pages ?):
+[1] [2] [Next]  
+[Previous] [1] [2]
+
