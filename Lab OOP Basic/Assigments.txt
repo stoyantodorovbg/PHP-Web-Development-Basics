@@ -1,0 +1,62 @@
+Lab: OOP Basic
+This document defines the exercise assignments for the "PHP Fundamentals" Course @ Software University . 
+Problem 1.	Define a class Car
+Define a class Car with fields for brand, model and year. Make a three instances of the class.
+Problem 2.	Add a Constructor
+
+1.	Add constructor to the Car class from the last task
+2.	It should accept a two  arguments - brand and model and set it as properties.
+
+Problem 3.	Add a methods
+1.	Add a set method for setting a property year
+2.	Validate input in new method
+3.	Add a get method for all properties
+
+Problem 4.	Make a instances
+Using the Car class, write a program that reads from the console 4 lines of car information information. Every line contains brand, model and  year, separated by space. Make list of objects of class Car. On finish - prints all cars, sorted in alphabetical order by brand, model and year.
+Examples
+Input	Output
+Nissan X-trail 2007
+Renault Scenic 2001
+Audi A6 2001
+Renault Clio 1995	Audi,A6
+Nissan,X-trail,2007
+Renault,Clio,1995
+Renault,Scenic,2001
+
+
+
+Problem 5.	Add sub class
+Using the previous problem, add a second class, that define car model extra details (engine, number of seats, horsepower,...). Add this information as property of main class and populate it via method. Make one instance, populate all properties and dump the object.
+Problem 6.	Rewrite a code
+Rewrite procedural/functional code to OOP style
+<?php
+
+function math_sum($a,$b){ 
+  return $a+$b; 
+} 
+
+function math_div($a,$b){ 
+  math_check_if_zero($a); 
+  math_check_if_zero($b); 
+  return $a / $b; 
+} 
+
+function math_check_if_zero($x){ 
+  if($x == 0){ 
+   echo "division by zero is not possible"; 
+   exit; 
+  } 
+} 
+
+echo math_sum(2,3); 
+echo math_div(1,2);
+
+
+
+Problem 7.	Create Anonymous Object
+1.	Create Anonymous Object with 10 properties by your choice and populate with values
+2.	Print all properties with foreach like - {name}->{value)
+
+
+

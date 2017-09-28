@@ -80,13 +80,13 @@ $opFactorial = function ($num1, $findFactorial) {
     }elseif (intval($num1) === 0){
         return 'Factorial By zero';
     } else {
-        return $findFactorial(intval($num1));
+        return $findFactorial($findFactorial, $num1, 1, 0);
     }
 };
 
 $findFactorial = function (&$findFactorial, $num, $counter, $out) {
     if ($counter <= $num) {
-        return $findFactorial($num, $counter + 1, $out + $counter * $counter);
+        return $findFactorial($findFactorial, $num, $counter + 1, $out + $counter * $counter);
     } else {
         return $out;
     }
