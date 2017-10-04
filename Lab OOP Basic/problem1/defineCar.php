@@ -1,10 +1,6 @@
 <?php
 
-class Car {
-    public $brand;
-    public $model;
-    public $year;
-}
+include 'Car.php';
 
 $myCar = new Car();
 $myCar -> brand = 'Subaru';

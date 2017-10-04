@@ -1,66 +1,15 @@
 <?php
+include 'Car.php';
+include 'Model.php';
 
-class Car {
-    private $brand;
-    private $model;
-    private $year;
+$model = new Model('Golf', 'Siemens', '5', '120');
+$car = new Car('Vw', $model);
+$car -> setYear('2000');
 
-    public function getBrand()
-    {
-        return $this->brand;
-    }
+echo 'brand: ' . $car -> getBrand() . '<br>';
+echo 'seats: ' . $car -> getModel() -> model . 'model: '. '<br>';
+echo 'engine: ' .$car -> getModel() -> engine .  '<br>';
+echo 'seats: ' . $car -> getModel() -> seatsNumber . '<br>';
+echo 'horsepower: ' . $car -> getModel() -> horsepower . '<br>';
+echo 'year: ' . $car -> getYear() . '<br>';
 
-    public function getModel()
-    {
-        return $this->model;
-    }
-
-    public function getYear()
-    {
-        return $this->year;
-    }
-
-    public function setYear($year){
-        if (intval($year > 2017)) {
-            return;
-        }
-        $this->year = $year;
-    }
-
-    function __construct ($brand, $model) {
-        $this->brand = $brand;
-        $this->model = $model;
-    }
-}
-
-class Model {
-    public $model;
-    public $seatsNumber;
-    public $horsepower;
-}
-
-while (true) {
-    $input = trim(fgets(STDIN));
-
-    $inputArr = explode(' ', $input);
-
-    $car = new Car($inputArr[0], $inputArr[1]);
-    $car->setYear($inputArr[2]);
-    $cars[] = $car;
-
-    if (count($cars) === 4) {
-        break;
-    }
-}
-
-sort($cars);
-
-$result = [];
-foreach($cars as $car) {
-    $brand = $car -> getBrand();
-    $model = $car -> getModel();
-    $year = $car -> getYear();
-    $result[] = "$brand,$model,$year";
-}
-
-echo implode("\n", $result);
