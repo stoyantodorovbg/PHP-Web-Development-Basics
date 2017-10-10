@@ -1,10 +1,13 @@
 <?php
 
 
-class Person{
+abstract class Person{
     protected $name;
     protected $ageBirth;
     protected $ageDead;
+
+    abstract public function getTimeLived();
+    abstract public function getGenerationNum();
 
     /**
      * Father constructor.
@@ -37,9 +40,5 @@ class Person{
      */
     public function getAgeDead(): int {
         return $this->ageDead;
-    }
-
-    public function getTimeLived() {
-        return $this->ageDead - $this->ageBirth ;
     }
 }
