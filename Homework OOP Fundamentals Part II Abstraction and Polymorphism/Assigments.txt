@@ -1,0 +1,196 @@
+Homework: OOP Fundamentals Part II
+Abstraction and Polymorphism
+This document defines the homework assignments  for "PHP Web Development Basic" Course @ Software University. Please submit ……………………………………………….???
+Problem 1. Vehicles
+Write a program that models 2 vehicles (Car and Truck) and will be able to simulate driving and refueling them. Car and truck both have fuel quantity, fuel consumption in liters per km and can be driven given distance and refueled with given liters. But in the summer both vehicles use air conditioner and their fuel consumption per km is increased by 0.9 liters for the car and with 1.6 liters for the truck. Also the truck has a tiny hole in his tank and when it gets refueled it gets only 95% of given fuel. The car has no problems when refueling and adds all given fuel to its tank. If vehicle cannot travel given distance its fuel does not change.
+Input
+•	On the first line - information about the car in format {Car {fuel quantity} {liters per km}}
+•	On the second line – info about the truck in format {Truck {fuel quantity} {liters per km}}
+•	On third line - number of commands N that will be given on the next N lines
+•	On the next N lines – commands in format
+o	Drive Car {distance}
+o	Dive Truck {distance}
+o	Refuel Car {liters}
+o	Refuel Truck {liters}
+Output
+After each Drive command print whether the Car/Truck was able to travel given distance in format if it’s successful. Print the distance with all digits after the decimal separator except trailing zeros. 
+Car/Truck travelled {distance} km
+Or if it is not:
+Car/Truck needs refueling
+Finally print the remaining fuel for both car and truck rounded 2 digits after floating point in format:
+Car: {liters}
+Truck: {liters}
+
+Example
+Input	Output
+Car 15 0.3
+Truck 100 0.9
+4
+Drive Car 9
+Drive Car 30
+Refuel Car 50
+Drive Truck 10	Car travelled 9 km
+Car needs refueling
+Truck travelled 10 km
+Car: 54.20
+Truck: 75.00
+Car 30.4 0.4
+Truck 99.34 0.9
+5
+Drive Car 500
+Drive Car 13.5
+Refuel Truck 10.300
+Drive Truck 56.2
+Refuel Car 100.2	Car needs refueling
+Car travelled 13.5 km
+Truck needs refueling
+Car: 113.05
+Truck: 109.13
+
+Problem 2. Extending Vehicles
+Use your solution of the previous task for starting point and add more functionality. Add new vehicle – Bus. Now every vehicle has tank capacity and fuel quantity cannot fall below 0 (If fuel quantity become less than 0 print on the console “Fuel must be a positive number”). 
+The car and the bus cannot be filled with fuel more than their tank capacity. If you try to put more fuel in the tank than the available space, print on the console “Cannot fit fuel in tank” and do not add any fuel in vehicles tank. 
+Add new command for the bus. The bus can drive with or without people. If the bus is driving with people, the air-conditioner is turned on and its fuel consumption per kilometer is increased with 1.4 liters. If there are no people in the bus when driving the air-conditioner is turned off and does not increase the fuel consumption.
+Input
+•	On the first three lines you will receive information about the vehicles in format:
+Vehicle {initial fuel quantity} {liters per km} {tank capacity}
+•	On fourth line - number of commands N that will be given on the next N lines
+•	On the next N lines – commands in format
+o	Drive Car {distance}
+o	Drive Truck {distance}
+o	Drive Bus {distance}
+o	DriveEmpty Bus {distance}
+o	Refuel Car {liters}
+o	Refuel Truck {liters}
+o	Refuel Bus {liters}
+Output
+•	After each Drive command print whether the Car/Truck/Bus was able to travel given distance in format if it’s successful:
+Car/Truck/Bus travelled {distance} km
+•	Or if it is not:
+Car/Truck/Bus needs refueling
+•	If given fuel is ? 0 print “Fuel must be a positive number”.
+•	If given fuel cannot fit in car or bus tank print “Cannot fit fuel in tank”
+•	Finally print the remaining fuel for car, truck and bus rounded 2 digits after floating point in format:
+Car: {liters}
+Truck: {liters}
+Bus: {liters}
+
+Example
+Input	Output
+Car 30 0.04 70
+Truck 100 0.5 300
+Bus 40 0.3 150
+8
+Refuel Car -10
+Refuel Truck 0
+Refuel Car 10
+Refuel Car 300
+Drive Bus 10
+Refuel Bus 1000
+DriveEmpty Bus 100
+Refuel Truck 1000  	Cannot fit fuel in tank
+Bus travelled 10 km
+Cannot fit fuel in tank
+Bus needs refueling
+Car: 30.00
+Truck: 1050.00
+Bus: 23.00
+
+Poblem 3. Wild Farm Hierarchy
+Your task is to create a class hierarchy like the picture below. All the classes except Vegetable, Meat, Mouse, Tiger, Cat & Zebra should be abstract. 
+Input should be read from the console. Every even line will contain information about the Animal in following format:
+{AnimalType} {AnimalName} {AnimalWeight} {AnimalLivingRegion} [{CatBreed} = Only if its cat]
+On the odd lines you will receive information about the food that you should give to the Animal. The line will consist of FoodType and quantity separated by a whitespace.
+
+ 
+
+You should build the logic to determine if the animal is going to eat the provided food. The Mouse and Zebra should check if the food is a Vegetable. If it is they will eat it. Otherwise you should print a message in the format:
+{AnimalType} are not eating that type of food!
+
+Cats eat any kind of food, but Tigers accept only Meat. If Vegetable is provided to a tiger message like the one above should be printed on the console.
+
+{AnimalType} [{AnimalName}, {CatBreed}, {AnimalWeight}, {AnimalLivingRegion}, {FoodEaten}]
+
+Print all AnimalWeight with no trailing zeroes after the decimal separator. 
+After you read information about the Animal and Food then invoke makeSound method of the current animal and then feed it. At the end print the whole object and proceed reading information about the next animal/food. The input will continue until you receive “End” for animal information.
+Input	Output
+Cat Gray 1.1 Home Persian
+Vegetable 4
+End	Meowwww
+Cat[Gray, Persian, 1.1, Home, 4]
+Tiger Typcho 167.7 Asia
+Vegetable 1
+End	ROAAR!!!
+Tigers are not eating that type of food!
+Tiger[Typcho, 167.7, Asia, 0]
+Zebra Doncho 500 Africa
+Vegetable 150
+End	Zs
+Zebra[Doncho, 500, Africa, 150]
+Mouse Jerry 0.5 Anywhere
+Vegetable 0
+End	SQUEEEAAAK!
+ Mouse[Jerry, 0.5, Anywhere, 0]
+
+Problem 4. Family Tree (Father, Sun and GrandSun)
+Do you remember the problem about Person? Now your purpose is to create a hierarchy of classes based on Person.
+Define a class Father with properties yearBirth, yearDead and name. Then define a class called Son which inherits Person. Define a class that is called GrandSon which inherits Son. 
+Write a method called getTimeLived() in Person which should be inherited in all child classes. Write an overwritten method called getGenerationNum() which returns 1 for Person, 2 for Sun and 3 for GrandSon. It’s person is to show us the level in which the person is.  
+You have to create a hierarchy of objects that corresponds to a particular family tree. 
+Input
+The input is hard coded as an array of objects. 
+Output
+You should print an HTML table in three levels by your design – the person, sons and grandsons:
+1. Person:  James Strong, 1970 – 1940, lived 30 years  
+2. Sons:
+Name, from- to, lived …
+Name, from- to, lived …
+
+Average Lifespan: 43 years
+3. Grandsons: …
+Name, from- to, lived …
+Name, from- to, lived …
+Average Lifespan: 51 years
+See step 4 for the particular input data!
+Note
+Your classes' names MUST be the same as the names shown above!!!
+Sample Code
+class Father {
+    
+   // 1. Add the Properties
+   // 2. Add the Constructor
+   // 3. Add the Methods
+}
+
+Step 1. Define the Properties of a Father
+Define the yearBirth, yearDead and name properties of a Person. Ensure that they can only be changed by the class itself or its descendants (pick the most appropriate access modifier).
+Step 2. Define the Constructor
+Define a constructor that accepts name, yearBirth and yearDeath arguments.
+Sample Code
+function __construct(string $name, int $yearBirth, int $yearDeath){
+    $this->setName($name);
+    // More todo
+} 
+
+Step 3. Perform Validations
+After you have created the properties (e.g. name and age). Next step is to perform validations for each one. The getter should return the corresponding property’s value and the setter should validate the input data before setting it. Do this for each property. The name should be a string at least 3 characters long. 
+Step 4. Create a hierarchy of objects
+Create a hierarchy that corresponds to the Following family tree:
+1.James Strong lived from 1873 to 1923. He had two sons:
+1.1. Peter Strong lived from 1894 only some 34 years and died
+1.3. Andrew Strong lived from 1899 to 1970 and was a blessed person whom everybody loved
+Andrew Strong had 3 daughters and 3 sons as follows:
+2.1. Jackson Strong was born when Andrew was 28 years old and lived 65 years.
+2.2. Martin Strong was born in 1927 and died in 1967
+2.3. Gregory Strong was born in 1931 and lived for 69 years
+Use the Father, Son and GrandSon classes to create objects for each person. Use an array of objects to hold the hierarchy not simple variables.
+Hint
+Use the overwritten method in each class to filter persons by their level in hierarchy.
+Step 6. Calculate the average timespan
+You can create a separate function and pass all persons/objects from one generation which will calculate the average timespan. Another way is to use the method getTimeLived() of each class and find the average. Choose the more memory efficient solution.  
+Problem 5. Abstract class Person
+Go back to problem 4 and create an abstract class Person. Define getTimeLived() and getGenerationNum() as abstract methods. Now redefine the Father class to extend the abstract Person. 
+Step 2. Do not define getGenerationNum() in GrandSon
+What error do you get when this method is not implemented? Why do you get it?
+Step 3. Do not define Person as abstract
+Let Person be not defined abstract but let getTimeLived() be defined as an abstract method/function? Can you then create an instance of Person? Why not? Is Person still abstract?
