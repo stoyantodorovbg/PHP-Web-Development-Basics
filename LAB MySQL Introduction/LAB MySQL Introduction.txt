@@ -1,0 +1,85 @@
+/* Delimiter changed to ; */
+/* Connecting to 127.0.0.1 via MariaDB (TCP/IP), username root, using password: No ... */
+SELECT CONNECTION_ID();
+/* Connected. Thread-ID: 17356 */
+/* Characterset: utf8mb4 */
+SHOW STATUS;
+SHOW VARIABLES;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SHOW COLLATION;
+SHOW VARIABLES LIKE 'collation_server';
+CREATE DATABASE `php_course` /*!40100 COLLATE 'latin1_swedish_ci' */;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='information_schema';
+SHOW TABLE STATUS FROM `information_schema`;
+SHOW FUNCTION STATUS WHERE `Db`='information_schema';
+SHOW PROCEDURE STATUS WHERE `Db`='information_schema';
+SHOW TRIGGERS FROM `information_schema`;
+SHOW EVENTS FROM `information_schema`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+USE `php_course`;
+SHOW ENGINES;
+SHOW VARIABLES LIKE 'collation_database';
+CREATE TABLE `students` (
+	`first_name` VARCHAR(50) NULL,
+	`last_name` VARCHAR(50) NULL,
+        `student_number` CHAR(10) NULL,
+	`phone` VARCHAR(50) NULL,
+	`date_record` DATETIME NULL,
+	`date_last_change` DATETIME NULL,
+	`is_active` ENUM(0,1) NULL
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
+/* SQL Error (1064): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0,1) NULL
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB' at line 7 */
+CREATE TABLE `students` (
+	`first_name` VARCHAR(50) NULL,
+	`last_name` VARCHAR(50) NULL,
+        `student_number` CHAR(10) NULL,
+	`phone` VARCHAR(50) NULL,
+	`date_record` DATETIME NULL,
+	`date_last_change` DATETIME NULL,
+	`is_active` ENUM('Y','N') NULL
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+SHOW CREATE TABLE `php_course`.`students`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `php_course`.`students`;
+ALTER TABLE `students`
+	CHANGE COLUMN `student_number` `student_number` CHAR(10) NOT NULL DEFAULT NULL FIRST,
+	ADD PRIMARY KEY (`student_number`),
+	ADD UNIQUE INDEX `student_number` (`student_number`);
+/* SQL Error (1067): Invalid default value for 'student_number' */
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+DROP TABLE `students`;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SHOW DATABASES;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+/* Table node "students" not found in tree. */
+/* Entering session "Unnamed" */	
+DROP DATABASE `php_course`;
+SHOW DATABASES;

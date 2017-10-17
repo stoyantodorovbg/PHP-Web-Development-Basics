@@ -1,0 +1,159 @@
+/* Delimiter changed to ; */
+/* Connecting to 127.0.0.1 via MariaDB (TCP/IP), username root, using password: Yes ... */
+/* Can't connect to MySQL server on '127.0.0.1' (10061) */
+/* Connecting to 127.0.0.1 via MariaDB (TCP/IP), username root, using password: Yes ... */
+SELECT CONNECTION_ID();
+/* Connected. Thread-ID: 2 */
+/* Characterset: utf8mb4 */
+SHOW STATUS;
+SHOW VARIABLES;
+SHOW DATABASES;
+USE `trail_sharing_project`;
+/* Entering session "Unnamed" */
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='trail_sharing_project';
+SHOW TABLE STATUS FROM `trail_sharing_project`;
+SHOW FUNCTION STATUS WHERE `Db`='trail_sharing_project';
+SHOW PROCEDURE STATUS WHERE `Db`='trail_sharing_project';
+SHOW TRIGGERS FROM `trail_sharing_project`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='information_schema';
+SHOW TABLE STATUS FROM `information_schema`;
+SHOW FUNCTION STATUS WHERE `Db`='information_schema';
+SHOW PROCEDURE STATUS WHERE `Db`='information_schema';
+SHOW TRIGGERS FROM `information_schema`;
+SHOW EVENTS FROM `information_schema`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='trail_sharing_project';
+USE `test_learn`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='test_learn';
+SHOW TABLE STATUS FROM `test_learn`;
+SHOW FUNCTION STATUS WHERE `Db`='test_learn';
+SHOW PROCEDURE STATUS WHERE `Db`='test_learn';
+SHOW TRIGGERS FROM `test_learn`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='test_learn';
+SHOW COLLATION;
+SHOW VARIABLES LIKE 'collation_server';
+SHOW CREATE DATABASE `test_learn`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='test_learn';
+SHOW TABLE STATUS FROM `test_learn`;
+SHOW FUNCTION STATUS WHERE `Db`='test_learn';
+SHOW PROCEDURE STATUS WHERE `Db`='test_learn';
+SHOW TRIGGERS FROM `test_learn`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='test_learn';
+SHOW DATABASES;
+CREATE DATABASE `php_course` /*!40100 COLLATE 'utf8_general_ci' */;
+RENAME TABLE `test_learn`.`users` TO `php_course`.`users`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='test_learn';
+SHOW TABLE STATUS FROM `test_learn`;
+SHOW FUNCTION STATUS WHERE `Db`='test_learn';
+SHOW PROCEDURE STATUS WHERE `Db`='test_learn';
+SHOW TRIGGERS FROM `test_learn`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='test_learn';
+DROP DATABASE `test_learn`;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='';
+SHOW TABLE STATUS FROM ``;
+/* SQL Error (1102): Incorrect database name '' */
+SHOW FUNCTION STATUS WHERE `Db`='';
+SHOW PROCEDURE STATUS WHERE `Db`='';
+SHOW TRIGGERS FROM ``;
+/* SQL Error (1102): Incorrect database name '' */
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='';
+USE `php_course`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+SHOW CREATE TABLE `php_course`.`users`;
+SHOW ENGINES;
+ALTER TABLE `users`
+	ADD COLUMN `phone` VARCHAR(50) NULL DEFAULT NULL AFTER `years`,
+	ADD COLUMN `address` VARCHAR(250) NULL DEFAULT NULL AFTER `phone`,
+	ADD COLUMN `active` ENUM('Y','N') NULL DEFAULT NULL AFTER `address`,
+	ADD COLUMN `motivation_later` TEXT NULL DEFAULT NULL AFTER `active`,
+	ADD COLUMN `notes` TEXT NULL DEFAULT NULL AFTER `motivation_later`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+SHOW CREATE TABLE `php_course`.`users`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `php_course`.`users`;
+SELECT  `user_id`,  `user_name`,  `first_name`,  `last_name`,  `create_date`,  `years`,  `phone`,  `address`,  `active`,  LEFT(`motivation_later`, 256),  LEFT(`notes`, 256) FROM `php_course`.`users` LIMIT 1000;
+SHOW CREATE TABLE `php_course`.`users`;
+UPDATE `php_course`.`users` SET `phone`='987658554', `address`='Sofia, Tzar Osvoboditel 1', `active`='Y', `motivation_later`='I want learn.', `notes`='some notes' WHERE  `user_id`=6;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes` FROM `php_course`.`users` WHERE  `user_id`=6;
+UPDATE `php_course`.`users` SET `years`='18', `phone`='73466757', `address`='Sofia Liulin 5, 555, 3, 7', `active`='Y', `motivation_later`='Iq go znam tva.', `notes`='Iskam bira' WHERE  `user_id`=7;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes` FROM `php_course`.`users` WHERE  `user_id`=7;
+UPDATE `php_course`.`users` SET `phone`='9987665679797' WHERE  `user_id`=4;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes` FROM `php_course`.`users` WHERE  `user_id`=4;
+ALTER TABLE `users`
+	ADD COLUMN `student_number` TEXT NULL AFTER `notes`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+SHOW CREATE TABLE `php_course`.`users`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `php_course`.`users`;
+SELECT  `user_id`,  `user_name`,  `first_name`,  `last_name`,  `create_date`,  `years`,  `phone`,  `address`,  `active`,  LEFT(`motivation_later`, 256),  LEFT(`notes`, 256),  LEFT(`student_number`, 256) FROM `php_course`.`users` LIMIT 1000;
+SHOW CREATE TABLE `php_course`.`users`;
+UPDATE `php_course`.`users` SET `student_number`='87768070' WHERE  `user_id`=1;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=1;
+SHOW CREATE TABLE `php_course`.`users`;
+UPDATE php_course.users SET student_number="874784287"
+;
+/* Affected rows: 11  Found rows: 0  Warnings: 0  Duration for 1 query: 0.109 sec. */
+SELECT  `user_id`,  `user_name`,  `first_name`,  `last_name`,  `create_date`,  `years`,  `phone`,  `address`,  `active`,  LEFT(`motivation_later`, 256),  LEFT(`notes`, 256),  LEFT(`student_number`, 256) FROM `php_course`.`users` LIMIT 1000;
+SHOW CREATE TABLE `php_course`.`users`;
+ALTER TABLE `users`
+	CHANGE COLUMN `student_number` `student_number` INT NULL AUTO_INCREMENT AFTER `notes`;
+/* SQL Error (1075): Incorrect table definition; there can be only one auto column and it must be defined as a key */
+ALTER TABLE `users`
+	CHANGE COLUMN `student_number` `student_number` INT NULL AUTO_INCREMENT AFTER `notes`;
+/* SQL Error (1075): Incorrect table definition; there can be only one auto column and it must be defined as a key */
+ALTER TABLE `users`
+	CHANGE COLUMN `student_number` `student_number` INT NULL AFTER `notes`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='php_course';
+SHOW TABLE STATUS FROM `php_course`;
+SHOW FUNCTION STATUS WHERE `Db`='php_course';
+SHOW PROCEDURE STATUS WHERE `Db`='php_course';
+SHOW TRIGGERS FROM `php_course`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='php_course';
+SHOW CREATE TABLE `php_course`.`users`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `php_course`.`users`;
+SELECT  `user_id`,  `user_name`,  `first_name`,  `last_name`,  `create_date`,  `years`,  `phone`,  `address`,  `active`,  LEFT(`motivation_later`, 256),  LEFT(`notes`, 256),  `student_number` FROM `php_course`.`users` LIMIT 1000;
+SHOW CREATE TABLE `php_course`.`users`;
+UPDATE `php_course`.`users` SET `student_number`='874784286' WHERE  `user_id`=4;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=4;
+UPDATE `php_course`.`users` SET `student_number`='874784285' WHERE  `user_id`=6;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=6;
+UPDATE `php_course`.`users` SET `student_number`='8747842847' WHERE  `user_id`=7;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=7;
+UPDATE `php_course`.`users` SET `student_number`='874784283' WHERE  `user_id`=11;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=11;
+UPDATE `php_course`.`users` SET `student_number`='8747842347' WHERE  `user_id`=12;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=12;
+UPDATE `php_course`.`users` SET `student_number`='87478457' WHERE  `user_id`=13;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=13;
+UPDATE `php_course`.`users` SET `student_number`='87478347' WHERE  `user_id`=14;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=14;
+UPDATE `php_course`.`users` SET `student_number`='8747845528667' WHERE  `user_id`=16;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=16;
+UPDATE `php_course`.`users` SET `student_number`='874784' WHERE  `user_id`=17;
+SELECT `user_id`, `user_name`, `first_name`, `last_name`, `create_date`, `years`, `phone`, `address`, `active`, `motivation_later`, `notes`, `student_number` FROM `php_course`.`users` WHERE  `user_id`=17;
+DELETE FROM `php_course`.`users` WHERE  `user_id`=1;
+DELETE FROM `php_course`.`users` WHERE  `address` IS NULL
+;
+/* SQL Error (1064): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ISNULL' at line 1 */
+/* Affected rows: 0  Found rows: 0  Warnings: 0  Duration for 0 of 1 query: 0.000 sec. */
+SELECT  `user_id`,  `user_name`,  `first_name`,  `last_name`,  `create_date`,  `years`,  `phone`,  `address`,  `active`,  LEFT(`motivation_later`, 256),  LEFT(`notes`, 256),  `student_number` FROM `php_course`.`users` LIMIT 1000;
+SHOW CREATE TABLE `php_course`.`users`;

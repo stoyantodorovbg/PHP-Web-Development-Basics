@@ -1,0 +1,36 @@
+SELECT `person_id`, `first_name`, `last_name`, `number` FROM `phonebook`.`phones` WHERE  `person_id`=1;
+ALTER TABLE `phones`
+	ALTER `first_name` DROP DEFAULT,
+	ALTER `last_name` DROP DEFAULT,
+	ALTER `number` DROP DEFAULT;
+ALTER TABLE `phones`
+	COLLATE='utf8_general_ci',
+	AUTO_INCREMENT=1,
+	CHANGE COLUMN `person_id` `person_id` INT(10) NOT NULL AUTO_INCREMENT FIRST,
+	CHANGE COLUMN `first_name` `first_name` VARCHAR(255) NOT NULL COLLATE 'utf8_unicode_ci' AFTER `person_id`,
+	CHANGE COLUMN `last_name` `last_name` VARCHAR(255) NOT NULL COLLATE 'utf8_unicode_ci' AFTER `first_name`,
+	CHANGE COLUMN `number` `number` VARCHAR(10) NOT NULL COLLATE 'utf8_unicode_ci' AFTER `last_name`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='phonebook';
+SHOW TABLE STATUS FROM `phonebook`;
+SHOW FUNCTION STATUS WHERE `Db`='phonebook';
+SHOW PROCEDURE STATUS WHERE `Db`='phonebook';
+SHOW TRIGGERS FROM `phonebook`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='phonebook';
+SHOW CREATE TABLE `phonebook`.`phones`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `phonebook`.`phones`;
+SHOW VARIABLES LIKE 'collation_server';
+SHOW CREATE DATABASE `phonebook`;
+ALTER DATABASE `phonebook` COLLATE 'utf8_general_ci';
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='phonebook';
+SHOW TABLE STATUS FROM `phonebook`;
+SHOW FUNCTION STATUS WHERE `Db`='phonebook';
+SHOW PROCEDURE STATUS WHERE `Db`='phonebook';
+SHOW TRIGGERS FROM `phonebook`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='phonebook';
+SHOW CREATE TABLE `phonebook`.`phones`;
+SELECT * FROM `phonebook`.`phones` ORDER BY `first_name` ASC LIMIT 1000;
+SHOW CREATE TABLE `phonebook`.`phones`;
+INSERT INTO `phonebook`.`phones` (`first_name`, `last_name`, `number`) VALUES ('Ivan', 'Stoyanov', '359894123456');

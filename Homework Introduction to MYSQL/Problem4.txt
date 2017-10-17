@@ -1,0 +1,5 @@
+select `last_name`, `number`
+  from `phones`
+  where `first_name` = 'Ivan'
+;
+/* Affected rows: 0  Found rows: 1  Warnings: 0  Duration for 1 query: 0.000 sec. */

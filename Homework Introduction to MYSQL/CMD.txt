@@ -1,0 +1,226 @@
+
+C:\Programming\PHP Web Development Basics\PHP-Web-Development-Basics\LAB MySQL I
+ntroduction>mysql
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 10.1.26-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> UPDATE mysql.user SET Password=PASSWORD('123')WHERE User = 'ro
+ot';
+ERROR 1142 (42000): UPDATE command denied to user ''@'localhost' for table 'user
+'
+MariaDB [(none)]> Ctrl-C -- exit!
+Bye
+
+C:\Programming\PHP Web Development Basics\PHP-Web-Development-Basics\LAB MySQL I
+ntroduction>
+
+C:\Programming\PHP Web Development Basics\PHP-Web-Development-Basics\LAB MySQL I
+ntroduction>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 10.1.26-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> UPDATE mysql.user SET Password=PASSWORD('123')WHERE User='root
+';
+Query OK, 3 rows affected (0.07 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.04 sec)
+
+MariaDB [(none)]> show database
+    -> show databas;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MariaDB server version for the right syntax to use near 'dat
+abase
+show databas' at line 1
+MariaDB [(none)]> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MariaDB server version for the right syntax to use near 'dat
+abase' at line 1
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| testdb             |
++--------------------+
+6 rows in set (0.12 sec)
+
+MariaDB [(none)]> use phpmyadmin;
+Database changed
+MariaDB [phpmyadmin]> use test;
+Database changed
+MariaDB [test]> show tables;
+Empty set (0.00 sec)
+
+MariaDB [test]> use phpmyadmin;
+Database changed
+MariaDB [phpmyadmin]> show tables
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MariaDB server version for the right syntax to use near 'sho
+w tables' at line 2
+MariaDB [phpmyadmin]> show tables;
++------------------------+
+| Tables_in_phpmyadmin   |
++------------------------+
+| pma__bookmark          |
+| pma__central_columns   |
+| pma__column_info       |
+| pma__designer_settings |
+| pma__export_templates  |
+| pma__favorite          |
+| pma__history           |
+| pma__navigationhiding  |
+| pma__pdf_pages         |
+| pma__recent            |
+| pma__relation          |
+| pma__savedsearches     |
+| pma__table_coords      |
+| pma__table_info        |
+| pma__table_uiprefs     |
+| pma__tracking          |
+| pma__userconfig        |
+| pma__usergroups        |
+| pma__users             |
++------------------------+
+19 rows in set (0.00 sec)
+
+MariaDB [phpmyadmin]> explain pma_bookmark;
+ERROR 1146 (42S02): Table 'phpmyadmin.pma_bookmark' doesn't exist
+MariaDB [phpmyadmin]> explain pma__bookmark;
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| dbase | varchar(255) | NO   |     |         |                |
+| user  | varchar(255) | NO   |     |         |                |
+| label | varchar(255) | NO   |     |         |                |
+| query | text         | NO   |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+5 rows in set (0.23 sec)
+
+MariaDB [phpmyadmin]> use mysql;
+Database changed
+MariaDB [mysql]> select * from user;
++-----------+------+-------------------------------------------+-------------+--
+-----------+-------------+-------------+-------------+-----------+-------------+
+---------------+--------------+-----------+------------+-----------------+------
+------+------------+--------------+------------+-----------------------+--------
+----------+--------------+-----------------+------------------+-----------------
+-+----------------+---------------------+--------------------+------------------
++------------+--------------+------------------------+----------+------------+--
+-----------+--------------+---------------+-------------+-----------------+-----
+-----------------+--------+-----------------------+------------------+---------+
+--------------+--------------------+
+| Host      | User | Password                                  | Select_priv | I
+nsert_priv | Update_priv | Delete_priv | Create_priv | Drop_priv | Reload_priv |
+ Shutdown_priv | Process_priv | File_priv | Grant_priv | References_priv | Index
+_priv | Alter_priv | Show_db_priv | Super_priv | Create_tmp_table_priv | Lock_ta
+bles_priv | Execute_priv | Repl_slave_priv | Repl_client_priv | Create_view_priv
+ | Show_view_priv | Create_routine_priv | Alter_routine_priv | Create_user_priv
+| Event_priv | Trigger_priv | Create_tablespace_priv | ssl_type | ssl_cipher | x
+509_issuer | x509_subject | max_questions | max_updates | max_connections | max_
+user_connections | plugin | authentication_string | password_expired | is_role |
+ default_role | max_statement_time |
++-----------+------+-------------------------------------------+-------------+--
+-----------+-------------+-------------+-------------+-----------+-------------+
+---------------+--------------+-----------+------------+-----------------+------
+------+------------+--------------+------------+-----------------------+--------
+----------+--------------+-----------------+------------------+-----------------
+-+----------------+---------------------+--------------------+------------------
++------------+--------------+------------------------+----------+------------+--
+-----------+--------------+---------------+-------------+-----------------+-----
+-----------------+--------+-----------------------+------------------+---------+
+--------------+--------------------+
+| localhost | root | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 | Y           | Y
+           | Y           | Y           | Y           | Y         | Y           |
+ Y             | Y            | Y         | Y          | Y               | Y
+      | Y          | Y            | Y          | Y                     | Y
+          | Y            | Y               | Y                | Y
+ | Y              | Y                   | Y                  | Y
+| Y          | Y            | Y                      |          |            |
+           |              |             0 |           0 |               0 |
+               0 |        |                       | N                | N       |
+              |           0.000000 |
+| 127.0.0.1 | root | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 | Y           | Y
+           | Y           | Y           | Y           | Y         | Y           |
+ Y             | Y            | Y         | Y          | Y               | Y
+      | Y          | Y            | Y          | Y                     | Y
+          | Y            | Y               | Y                | Y
+ | Y              | Y                   | Y                  | Y
+| Y          | Y            | Y                      |          |            |
+           |              |             0 |           0 |               0 |
+               0 |        |                       | N                | N       |
+              |           0.000000 |
+| ::1       | root | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 | Y           | Y
+           | Y           | Y           | Y           | Y         | Y           |
+ Y             | Y            | Y         | Y          | Y               | Y
+      | Y          | Y            | Y          | Y                     | Y
+          | Y            | Y               | Y                | Y
+ | Y              | Y                   | Y                  | Y
+| Y          | Y            | Y                      |          |            |
+           |              |             0 |           0 |               0 |
+               0 |        |                       | N                | N       |
+              |           0.000000 |
+| localhost |      |                                           | N           | N
+           | N           | N           | N           | N         | N           |
+ N             | N            | N         | N          | N               | N
+      | N          | N            | N          | N                     | N
+          | N            | N               | N                | N
+ | N              | N                   | N                  | N
+| N          | N            | N                      |          |            |
+           |              |             0 |           0 |               0 |
+               0 |        |                       | N                | N       |
+              |           0.000000 |
+| localhost | pma  |                                           | N           | N
+           | N           | N           | N           | N         | N           |
+ N             | N            | N         | N          | N               | N
+      | N          | N            | N          | N                     | N
+          | N            | N               | N                | N
+ | N              | N                   | N                  | N
+| N          | N            | N                      |          |            |
+           |              |             0 |           0 |               0 |
+               0 |        |                       | N                | N       |
+              |           0.000000 |
++-----------+------+-------------------------------------------+-------------+--
+-----------+-------------+-------------+-------------+-----------+-------------+
+---------------+--------------+-----------+------------+-----------------+------
+------+------------+--------------+------------+-----------------------+--------
+----------+--------------+-----------------+------------------+-----------------
+-+----------------+---------------------+--------------------+------------------
++------------+--------------+------------------------+----------+------------+--
+-----------+--------------+---------------+-------------+-----------------+-----
+-----------------+--------+-----------------------+------------------+---------+
+--------------+--------------------+
+5 rows in set (0.00 sec)
+
+MariaDB [mysql]> SELECT Password from user WHERE user.User = 'root';
++-------------------------------------------+
+| Password                                  |
++-------------------------------------------+
+| *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
+| *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
+| *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
++-------------------------------------------+
+3 rows in set (0.00 sec)
+
+MariaDB [mysql]> ^ABye
+Ctrl-C -- exit!
+
+C:\Programming\PHP Web Development Basics\PHP-Web-Development-Basics\LAB MySQL I
+ntroduction>

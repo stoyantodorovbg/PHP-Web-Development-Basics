@@ -1,0 +1,30 @@
+LAB: MySQL Introduction
+This document defines the lab assignments for the "PHP WEB @ Software University.  All task can be send as SQL Scripts in one file..
+Problem 1.	Create Database
+
+?	Create new database with name “php-course”
+
+Problem 2.	Create Table
+?	Create table with name “students”
+?	Table must contains data for:
+0	Student First and Last Name
+0	Student number
+0	Phone
+0	Date of record
+0	Date of last data change
+0	Is student is active or not
+0	
+Choose appropriate names, types, sizes  and mandatory for each column. Determine which column should be unique.
+
+Problem 3.	Add “exists”check
+?	Modify current script to create objects only if they not exists. 
+Problem 4.	Delete Table
+?	Delete table “students”
+Problem 5.	Delete Database
+?	Delete database  “students”
+
+
+
+
+
+

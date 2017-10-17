@@ -1,0 +1,35 @@
+CREATE DATABASE `phonebook` /*!40100 COLLATE 'latin1_swedish_ci' */;
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+USE `phonebook`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='phonebook';
+SHOW TABLE STATUS FROM `phonebook`;
+SHOW FUNCTION STATUS WHERE `Db`='phonebook';
+SHOW PROCEDURE STATUS WHERE `Db`='phonebook';
+SHOW TRIGGERS FROM `phonebook`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='phonebook';
+SHOW VARIABLES LIKE 'collation_database';
+SHOW VARIABLES LIKE 'collation_server';
+SHOW CREATE DATABASE `phonebook`;
+ALTER DATABASE `phonebook` COLLATE 'utf8_unicode_ci';
+SHOW DATABASES;
+/* Entering session "Unnamed" */
+CREATE TABLE `phones` (
+	`person_id` INT NOT NULL AUTO_INCREMENT,
+	`first_name` VARCHAR(250) NOT NULL,
+	`last_name` VARCHAR(250) NOT NULL,
+	`number` VARCHAR(250) NOT NULL,
+	PRIMARY KEY (`person_id`)
+)
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='phonebook';
+SHOW TABLE STATUS FROM `phonebook`;
+SHOW FUNCTION STATUS WHERE `Db`='phonebook';
+SHOW PROCEDURE STATUS WHERE `Db`='phonebook';
+SHOW TRIGGERS FROM `phonebook`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='phonebook';
+SHOW CREATE TABLE `phonebook`.`phones`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `phonebook`.`phones`;

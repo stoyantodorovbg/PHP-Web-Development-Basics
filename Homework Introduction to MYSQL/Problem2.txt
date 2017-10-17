@@ -1,0 +1,8 @@
+SHOW CREATE TABLE `phonebook`.`phones`;
+SELECT * FROM `phonebook`.`phones` LIMIT 1000;
+SHOW CREATE TABLE `phonebook`.`phones`;
+SELECT * FROM `phonebook`.`phones` ORDER BY `first_name` ASC LIMIT 1000;
+SHOW CREATE TABLE `phonebook`.`phones`;
+INSERT INTO `phonebook`.`phones` (`first_name`, `last_name`, `number`) VALUES ('Pesho', 'Peshev', '08756474638');
+SELECT LAST_INSERT_ID();
+SELECT `person_id`, `first_name`, `last_name`, `number` FROM `phonebook`.`phones` WHERE  `person_id`=1;

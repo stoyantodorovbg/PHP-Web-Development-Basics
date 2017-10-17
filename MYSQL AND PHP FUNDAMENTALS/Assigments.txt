@@ -1,0 +1,60 @@
+LAB: MySQL and PHP Basics
+This document defines the lab assignments for the "PHP WEB @ Software University.  
+
+Part I - SQL Queries
+All tasks must be send as SQL Scripts in one file.
+
+Problem 1.	Prepare Database
+
+?	Create new database with name “php-course”
+?	Create table with name “students”
+?	Table must contains data for:
+0	Student First Name
+0	Student Last Name
+0	Student number
+0	Phone
+0	Home address
+0	Date of record
+0	Date of last data change
+0	Is student is active or not
+0	Motivation letter
+0	Notes
+Choose appropriate names, types, sizes  and mandatory for each column. Determine which column should be unique. Do not forget Primary KEY!
+
+Problem 2.	Add records
+?	Prepare Insert  SQL with data for five students
+0	Two students must have all data
+0	Others - only mandatory 
+
+Problem 3.	Change Records 
+?	Prepare Update SQL for data changing
+0	Change phone of student with ID = 2;
+0	Set address of students who do not have a number;
+Problem 4.	Delete Records
+?	Prepare Delete SQL
+0	Delete data for student with ID = 1;
+0	Delete data for students who do not have an address
+?	Preparate SQL for delete all data in table
+
+Part II - SQL and PHP
+All tasks must be send as PHP files
+
+Problem 5.	Add records
+Create php file that get student data from standard input. First input must be integer which indicates the number of student that must be send. Next N lines wii be in this format 
+<First_name> <Last_name> <Studen_number> <Phone>
+None: Phone is not mandatory and can missed
+All data must be saved in Database
+Problem 6.	Change Records
+
+?	Create php file that change student data from standard input. 
+?	Input format must be
+<User_id> <param_name> <param_value>
+?	Param_name will indicate will indicate which parameter must be change
+?	Param_value  will indicate will indicate new value of parameter
+?	New data must be saved in Database
+
+Problem 7.	Delete Records
+?	Create php file that delete student data from standard input. 
+?	Input format must be
+<User_id>
+?	Data for studen with ID = N must be deleted from Database
