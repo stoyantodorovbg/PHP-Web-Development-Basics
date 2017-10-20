@@ -1,0 +1,69 @@
+CREATE TABLE `employees` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`first_name` VARCHAR(50) NOT NULL,
+	`middle_name` VARCHAR(50) NOT NULL,
+	`last_name` VARCHAR(50) NOT NULL,
+	`department` VARCHAR(50) NOT NULL,
+	`position` VARCHAR(50) NOT NULL,
+	`passport_id` VARCHAR(50) NOT NULL,
+	PRIMARY KEY (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees`;
+SHOW VARIABLES LIKE 'collation_database';
+SELECT 1 FROM `employees` LIMIT 1;
+SHOW COLUMNS FROM `employees`;
+SHOW CREATE TABLE `geography`.`employees`;
+SELECT 1 FROM `employees` LIMIT 1;
+SHOW COLUMNS FROM `employees`;
+SHOW CREATE TABLE `geography`.`employees`;
+CREATE TABLE `employees_emails` (
+	`id` INT NULL,
+	`email_type` VARCHAR(50) NOT NULL,
+	`email` VARCHAR(50) NOT NULL,
+	CONSTRAINT `email_id` FOREIGN KEY (`id`) REFERENCES `employees` (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees_emails`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees_emails`;
+SHOW VARIABLES LIKE 'collation_database';
+SELECT 1 FROM `employees` LIMIT 1;
+SHOW COLUMNS FROM `employees`;
+SHOW CREATE TABLE `geography`.`employees`;
+CREATE TABLE `employees_phone` (
+	`id` INT NOT NULL,
+	`phone_type` VARCHAR(50) NOT NULL,
+	`phone` VARCHAR(50) NOT NULL,
+	CONSTRAINT `phone_id` FOREIGN KEY (`id`) REFERENCES `employees` (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees_phone`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees_phone`;

@@ -1,9 +1,8 @@
 <?php
 
 
-class Database extends PDO
+class DB
 {
-
     private $db_host = 'localhost';
     private $db_name = 'geography';
     private $db_user = 'root';
