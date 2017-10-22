@@ -23,62 +23,102 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CallCenter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problem7-8/CallCenter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-572">
+              <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+              <folding>
+                <marker date="1508397791865" expanded="true" signature="1176:1269" ph="SELECT `elev... peaks" />
+                <marker date="1508397791865" expanded="true" signature="1940:2184" ph="SELECT `coun... countries" />
+                <marker date="1508397791865" expanded="true" signature="2260:2364" ph="SELECT `moun... mountains_countries" />
+                <marker date="1508397791865" expanded="true" signature="2704:2809" ph="SELECT `desc... currencies" />
+                <marker date="1508397791865" expanded="true" signature="2944:3054" ph="SELECT `cont... continents" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/problem10/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="297">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/problem11/Database.php">
+      <file leaf-file-name="call_center_app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problem10/call_center_app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="54">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CallCenter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problem10/CallCenter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="134" column="15" lean-forward="true" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="15" />
+              <folding>
+                <marker date="1508397791758" expanded="true" signature="1609:1702" ph="SELECT `elev... peaks" />
+                <marker date="1508397791758" expanded="true" signature="2483:2544" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2483:2545" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2483:2546" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2483:2596" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2483:2597" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2483:2598" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2483:2609" ph="DELETE FROM " />
+                <marker date="1508397791758" expanded="true" signature="2798:2937" ph="INSERT INTO `customers`... " />
+                <marker date="1508397791758" expanded="true" signature="3245:3505" ph="SELECT `coun... countries" />
+                <marker date="1508397791758" expanded="true" signature="3581:3685" ph="SELECT `moun... mountains_countries" />
+                <marker date="1508397791758" expanded="true" signature="4122:4227" ph="SELECT `desc... currencies" />
+                <marker date="1508397791758" expanded="true" signature="4362:4472" ph="SELECT `cont... continents" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/problem7-8/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+            <state relative-caret-position="255">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/problem9/Database.php">
+      <file leaf-file-name="CallCenter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problem12/CallCenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geography_db.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geography_db.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="189">
+              <caret line="118" column="33" lean-forward="true" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="51" />
+              <folding>
+                <marker date="1508478249935" expanded="true" signature="1495:1610" ph="SELECT `coun... countries" />
+                <marker date="1508478249935" expanded="true" signature="1495:1614" ph="SELECT `coun... countries" />
+                <marker date="1508478249935" expanded="true" signature="1495:1615" ph="SELECT `coun... countries" />
+                <marker date="1508478249935" expanded="true" signature="1495:1622" ph="SELECT `coun... countries" />
+                <marker date="1508478249935" expanded="true" signature="3519:3612" ph="SELECT `elev... peaks" />
+                <marker date="1508478249935" expanded="true" signature="4434:4628" ph="SELECT `coun... continents" />
+                <marker date="1508478249935" expanded="true" signature="4434:4631" ph="SELECT `coun... continents" />
+                <marker date="1508478249935" expanded="true" signature="4434:4760" ph="SELECT `coun... continents" />
+                <marker date="1508478249935" expanded="true" signature="4998:5127" ph="SELECT `coun... customers" />
+                <marker date="1508478249935" expanded="true" signature="4998:5130" ph="SELECT `coun... customers" />
+                <marker date="1508478249935" expanded="true" signature="4998:5137" ph="SELECT `coun... customers" />
+                <marker date="1508478249935" expanded="true" signature="5442:5540" ph="SELECT `coun... countries" />
+                <marker date="1508478249935" expanded="true" signature="5783:5898" ph="SELECT `cust... customers" />
+                <marker date="1508478249935" expanded="true" signature="6199:6325" ph="DELETE FROM " />
+                <marker date="1508478249935" expanded="true" signature="6591:6730" ph="INSERT INTO `customers`... " />
+                <marker date="1508478249935" expanded="true" signature="7072:7332" ph="SELECT `coun... countries" />
+                <marker date="1508478249935" expanded="true" signature="7442:7546" ph="SELECT `moun... mountains_countries" />
+                <marker date="1508478249935" expanded="true" signature="8021:8126" ph="SELECT `desc... currencies" />
+                <marker date="1508478249935" expanded="true" signature="8299:8409" ph="SELECT `cont... continents" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,6 +202,7 @@
         <option value="$PROJECT_DIR$/problem11/Database.php" />
         <option value="$PROJECT_DIR$/problem9/Database.php" />
         <option value="$PROJECT_DIR$/db_config.php" />
+        <option value="$PROJECT_DIR$/problem7-8/Database.php" />
       </list>
     </option>
   </component>
@@ -216,63 +257,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="problem9" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="problem7-8" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="problem12" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="problem11" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Homework MySQL and PHP  Basics" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="problem10" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,18 +355,18 @@
       <option name="presentableId" value="Default" />
       <updated>1508253153795</updated>
       <workItem from="1508253156935" duration="47166000" />
-      <workItem from="1508515680917" duration="61000" />
+      <workItem from="1508515680917" duration="9379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47227000" />
+    <option name="totallyTimeSpent" value="56545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1868217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1868217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.056338027" sideWeight="0.50310075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -438,6 +423,10 @@
           <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
           <folding>
             <marker date="1508397791865" expanded="true" signature="1176:1269" ph="SELECT `elev... peaks" />
+            <marker date="1508397791865" expanded="true" signature="1940:2184" ph="SELECT `coun... countries" />
+            <marker date="1508397791865" expanded="true" signature="2260:2364" ph="SELECT `moun... mountains_countries" />
+            <marker date="1508397791865" expanded="true" signature="2704:2809" ph="SELECT `desc... currencies" />
+            <marker date="1508397791865" expanded="true" signature="2944:3054" ph="SELECT `cont... continents" />
           </folding>
         </state>
       </provider>
@@ -627,14 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/problem10/call_center_app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/problem11/call_center_app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -670,38 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/problem7-8/CallCenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
-          <folding>
-            <marker date="1508397791865" expanded="true" signature="1176:1269" ph="SELECT `elev... peaks" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problem10/CallCenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding>
-            <marker date="1508397791758" expanded="true" signature="1609:1702" ph="SELECT `elev... peaks" />
-            <marker date="1508397791758" expanded="true" signature="2483:2544" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2483:2545" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2483:2546" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2483:2596" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2483:2597" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2483:2598" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2483:2609" ph="DELETE FROM " />
-            <marker date="1508397791758" expanded="true" signature="2798:2937" ph="INSERT INTO `customers`... " />
-            <marker date="1508397791758" expanded="true" signature="3245:3505" ph="SELECT `coun... countries" />
-            <marker date="1508397791758" expanded="true" signature="3581:3685" ph="SELECT `moun... mountains_countries" />
-            <marker date="1508397791758" expanded="true" signature="4122:4227" ph="SELECT `desc... currencies" />
-            <marker date="1508397791758" expanded="true" signature="4362:4472" ph="SELECT `cont... continents" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/problem11/CallCenter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
@@ -723,46 +672,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/problem12/CallCenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="118" column="33" lean-forward="true" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="51" />
-          <folding>
-            <marker date="1508478249935" expanded="true" signature="1495:1610" ph="SELECT `coun... countries" />
-            <marker date="1508478249935" expanded="true" signature="1495:1614" ph="SELECT `coun... countries" />
-            <marker date="1508478249935" expanded="true" signature="1495:1615" ph="SELECT `coun... countries" />
-            <marker date="1508478249935" expanded="true" signature="1495:1622" ph="SELECT `coun... countries" />
-            <marker date="1508478249935" expanded="true" signature="3519:3612" ph="SELECT `elev... peaks" />
-            <marker date="1508478249935" expanded="true" signature="4434:4628" ph="SELECT `coun... continents" />
-            <marker date="1508478249935" expanded="true" signature="4434:4631" ph="SELECT `coun... continents" />
-            <marker date="1508478249935" expanded="true" signature="4434:4760" ph="SELECT `coun... continents" />
-            <marker date="1508478249935" expanded="true" signature="4998:5127" ph="SELECT `coun... customers" />
-            <marker date="1508478249935" expanded="true" signature="4998:5130" ph="SELECT `coun... customers" />
-            <marker date="1508478249935" expanded="true" signature="4998:5137" ph="SELECT `coun... customers" />
-            <marker date="1508478249935" expanded="true" signature="5442:5540" ph="SELECT `coun... countries" />
-            <marker date="1508478249935" expanded="true" signature="5783:5898" ph="SELECT `cust... customers" />
-            <marker date="1508478249935" expanded="true" signature="6199:6325" ph="DELETE FROM " />
-            <marker date="1508478249935" expanded="true" signature="6591:6730" ph="INSERT INTO `customers`... " />
-            <marker date="1508478249935" expanded="true" signature="7072:7332" ph="SELECT `coun... countries" />
-            <marker date="1508478249935" expanded="true" signature="7442:7546" ph="SELECT `moun... mountains_countries" />
-            <marker date="1508478249935" expanded="true" signature="8021:8126" ph="SELECT `desc... currencies" />
-            <marker date="1508478249935" expanded="true" signature="8299:8409" ph="SELECT `cont... continents" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/problem11/Database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/problem7-8/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -835,10 +748,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/problem10/call_center_app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/problem10/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="297">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem12/CallCenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="118" column="33" lean-forward="true" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="51" />
+          <folding>
+            <marker date="1508478249935" expanded="true" signature="1495:1610" ph="SELECT `coun... countries" />
+            <marker date="1508478249935" expanded="true" signature="1495:1614" ph="SELECT `coun... countries" />
+            <marker date="1508478249935" expanded="true" signature="1495:1615" ph="SELECT `coun... countries" />
+            <marker date="1508478249935" expanded="true" signature="1495:1622" ph="SELECT `coun... countries" />
+            <marker date="1508478249935" expanded="true" signature="3519:3612" ph="SELECT `elev... peaks" />
+            <marker date="1508478249935" expanded="true" signature="4434:4628" ph="SELECT `coun... continents" />
+            <marker date="1508478249935" expanded="true" signature="4434:4631" ph="SELECT `coun... continents" />
+            <marker date="1508478249935" expanded="true" signature="4434:4760" ph="SELECT `coun... continents" />
+            <marker date="1508478249935" expanded="true" signature="4998:5127" ph="SELECT `coun... customers" />
+            <marker date="1508478249935" expanded="true" signature="4998:5130" ph="SELECT `coun... customers" />
+            <marker date="1508478249935" expanded="true" signature="4998:5137" ph="SELECT `coun... customers" />
+            <marker date="1508478249935" expanded="true" signature="5442:5540" ph="SELECT `coun... countries" />
+            <marker date="1508478249935" expanded="true" signature="5783:5898" ph="SELECT `cust... customers" />
+            <marker date="1508478249935" expanded="true" signature="6199:6325" ph="DELETE FROM " />
+            <marker date="1508478249935" expanded="true" signature="6591:6730" ph="INSERT INTO `customers`... " />
+            <marker date="1508478249935" expanded="true" signature="7072:7332" ph="SELECT `coun... countries" />
+            <marker date="1508478249935" expanded="true" signature="7442:7546" ph="SELECT `moun... mountains_countries" />
+            <marker date="1508478249935" expanded="true" signature="8021:8126" ph="SELECT `desc... currencies" />
+            <marker date="1508478249935" expanded="true" signature="8299:8409" ph="SELECT `cont... continents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem7-8/CallCenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572">
+          <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+          <folding>
+            <marker date="1508397791865" expanded="true" signature="1176:1269" ph="SELECT `elev... peaks" />
+            <marker date="1508397791865" expanded="true" signature="1940:2184" ph="SELECT `coun... countries" />
+            <marker date="1508397791865" expanded="true" signature="2260:2364" ph="SELECT `moun... mountains_countries" />
+            <marker date="1508397791865" expanded="true" signature="2704:2809" ph="SELECT `desc... currencies" />
+            <marker date="1508397791865" expanded="true" signature="2944:3054" ph="SELECT `cont... continents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem10/CallCenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="134" column="15" lean-forward="true" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="15" />
+          <folding>
+            <marker date="1508397791758" expanded="true" signature="1609:1702" ph="SELECT `elev... peaks" />
+            <marker date="1508397791758" expanded="true" signature="2483:2544" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2483:2545" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2483:2546" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2483:2596" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2483:2597" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2483:2598" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2483:2609" ph="DELETE FROM " />
+            <marker date="1508397791758" expanded="true" signature="2798:2937" ph="INSERT INTO `customers`... " />
+            <marker date="1508397791758" expanded="true" signature="3245:3505" ph="SELECT `coun... countries" />
+            <marker date="1508397791758" expanded="true" signature="3581:3685" ph="SELECT `moun... mountains_countries" />
+            <marker date="1508397791758" expanded="true" signature="4122:4227" ph="SELECT `desc... currencies" />
+            <marker date="1508397791758" expanded="true" signature="4362:4472" ph="SELECT `cont... continents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem7-8/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>

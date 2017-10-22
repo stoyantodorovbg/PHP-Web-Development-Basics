@@ -67,3 +67,77 @@ SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EV
 SHOW CREATE TABLE `geography`.`employees_phone`;
 /* Entering session "Unnamed" */
 SHOW CREATE TABLE `geography`.`employees_phone`;
+ALTER TABLE `employees_emails`
+	ALTER `email` DROP DEFAULT;
+ALTER TABLE `employees_emails`
+	CHANGE COLUMN `email` `personal_email` VARCHAR(50) NOT NULL AFTER `id`,
+	ADD COLUMN `work_email` VARCHAR(50) NOT NULL AFTER `personal_email`,
+	DROP COLUMN `email_type`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees_emails`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees_emails`;
+SHOW CREATE TABLE `geography`.`employees_phone`;
+ALTER TABLE `employees_phone`
+	ALTER `phone` DROP DEFAULT;
+ALTER TABLE `employees_phone`
+	CHANGE COLUMN `phone` `personal_phone` VARCHAR(50) NOT NULL AFTER `id`,
+	ADD COLUMN `work_phone` VARCHAR(50) NOT NULL AFTER `personal_phone`,
+	DROP COLUMN `phone_type`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees_phone`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees_phone`;
+ALTER TABLE `employees`
+	ADD UNIQUE INDEX `first_name_middle_name_last_name_passport_id` (`first_name`, `middle_name`, `last_name`, `passport_id`);
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees`;
+SHOW CREATE TABLE `geography`.`employees_emails`;
+ALTER TABLE `employees_emails`
+	ALTER `personal_email` DROP DEFAULT,
+	ALTER `work_email` DROP DEFAULT;
+ALTER TABLE `employees_emails`
+	CHANGE COLUMN `personal_email` `email` VARCHAR(50) NOT NULL AFTER `id`,
+	CHANGE COLUMN `work_email` `type` VARCHAR(50) NOT NULL AFTER `email`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees_emails`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees_emails`;
+SHOW CREATE TABLE `geography`.`employees_phone`;
+ALTER TABLE `employees_phone`
+	ALTER `personal_phone` DROP DEFAULT,
+	ALTER `work_phone` DROP DEFAULT;
+ALTER TABLE `employees_phone`
+	CHANGE COLUMN `personal_phone` `phone` VARCHAR(50) NOT NULL AFTER `id`,
+	CHANGE COLUMN `work_phone` `type` VARCHAR(50) NOT NULL AFTER `phone`;
+SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='geography';
+SHOW TABLE STATUS FROM `geography`;
+SHOW FUNCTION STATUS WHERE `Db`='geography';
+SHOW PROCEDURE STATUS WHERE `Db`='geography';
+SHOW TRIGGERS FROM `geography`;
+SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='geography';
+SHOW CREATE TABLE `geography`.`employees_phone`;
+/* Entering session "Unnamed" */
+SHOW CREATE TABLE `geography`.`employees_phone`;
