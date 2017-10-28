@@ -1,0 +1,55 @@
+LAB: MySQL and PHP Advanced
+This document defines the lab assignments for the "PHP WEB @ Software University.  
+
+Part I - Transaction in SQL
+All tasks with SQL Scripts must be sent as text files with .sql extension
+
+Problem 1.	Prepare Database
+
+?	Create new database with name “php-course”
+?	Create table with name “students”
+0	Table must contains data for:
+¦	Student ID
+¦	Student First Name
+¦	Student Last Name
+¦	Student number
+?	Create table with name “courses”
+0	Table must contains data for:
+¦	Course ID
+¦	Course Name
+?	Create table with name “student_subscriptions”
+0	Table must contains data for:
+¦	Course ID
+¦	Student ID
+0	Populate table with 2 rows of sample data
+?	Make necessary relations and indexes
+
+Problem 2.	Populate tables via PHP file
+?	Create php file that get student data from standard input. The script must receive data until get the “edn” keyword. Other lines will be in this format 
+0	<First_name> <Last_name> <Studen_number> <CourseName>
+?	If student number exists - the script must throw Exception, print message on screen and continue receiving data
+?	If student number did not exists  - student data must be writen in database
+?	if course name exists - current student must be subscribed to it
+?	if course name did not exists - the script must throw Exception, print message on screen and continue receiving data. No any data for current student should not recorded into database 
+
+Problem 3.	Create procedure 
+?	Prepare SQL for creating procedure
+0	Procedure must return data for all students
+0	result must include
+¦	First and last name into one column
+¦	Student number
+¦	Course NAME
+Problem 4.	Call procedure
+?	Call procedure from problem 3 in PHP file and print data
+
+
+Problem 5.	Create trigger
+Create SQL trigger on table students
+Trigger must execute on insert and validate student number. The number must be at least 5 digits
+Problem 6.	Create trigger II *
+?	Add new column “subscribers” into table “courses“
+0	It must contains number of subscribed students in current course
+?	Create necessary SQL triggers on table “student_subscriptions” so that new column “subscribers” always show exact number of students in current course when new subscription is added
+0	
+Òhe solution to the task must contains SQL definition of triggers
+
