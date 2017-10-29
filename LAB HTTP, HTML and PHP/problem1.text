@@ -1,0 +1,89 @@
+http://softuni.bg/
+
+Response headers:
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: language=bg; path=/; secure
+Date: Sun, 29 Oct 2017 09:16:41 GMT
+Content-Length: 19695
+
+Request headers:
+GET / HTTP/1.1
+Host: softuni.bg
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.8
+Cookie: _ym_uid=1505554094806407949; cb-enabled=enabled; ASP.NET_SessionId=0dlfamhkjinxoqjyoc4y1gfl; __RequestVerificationToken=yazeiveh2Hx2cZKsZMMHJiAQ861MoJINv1vgRW5TDHpt1Hl-sX9K-mbFoX6ZNYemt6-NI54CdMJuPGWDXK-WTJ7BU2M1; .auth.softuni=nAA_tNldS21OG1x_WoaSL5QMRLjXQ3JApHPeYJoUVJLOkkGXdu0lwytMEtxZDCtAGjuz_vKvkWAQdZHxqPxdbjPcmHpu1p0QHQfUlFagbwQxgzGZkcec7DylP5QKM9b8FBihX0_di9ZkHXWughroVrrYQwi20n5ISGgFyScBEkRzp_4MZkUPxGSi4p3AuIx6KgmH9z8mZMzBvWo_kGjc_tY4GilNfzRU7NTLpc0S44PQLMizsXb2a3CUadK_tNxE82EeKvAaQwq0UlG7RO66mh0N5z1qW8C5MXk-lYRUnYnm0u3XgwP6Jze3DQml-H0zEWcMFmi3iAST3VT2QD8dDtQ2Q4K_NGhIZ207GC1cQgc37FeiaBCOtJxOy_QTVHk1QKCGUnUuLl81hQjuXjRdNKMXH9MAu5PTOSWYGD8HBYGH5j8ngcyP1b10-A7RxZvTkp-a2PvnbpfU9VO4kDbOBhqeIw9RXFmoXFVCdLd651MyxskWko00HI4x68-u1jGSUlF-CEnjvpPhpreNbAmuJ4mT7_JuaNL995Q6SYWqUSbmaXML82Y_L-nlKUXv4lEXEPJPoRjKvUa2nKjCrQWoWaVoTswQKuo1ObCDsWzh9tnNGlDLGUR6FVsrgzvp_8c739EhEqrriqSiDPQxDdWY9LUaTZFdg_WZWjLWGScfEvKvfllrZyI0vnWsTbpr1PvKv-LsvtuQ_blcgXPLdg0ibVb1SDz_nLzDhL0TECP1mDewc4gbCE3u5qykHCiFexHUNNl4pV0-sdmYIehbdJQLtpGom1M9Tl-tT-zYbJLYqG5YmGyPmQrK0vHGu_KR8BD7kur8VLcjQj4p8vMl0tVmy00zyuT-0BoTn4N_4YGxpgq1R8CUha3JX-7w8kfs8rvkTQ11kakRDYAesyptEOPDG4rAz7lVJvROJAD0xFBBPprA0OUHKPmvyQanFFX5FWhDQZ3pdOy3cCots5D8g7Z8HwiooTW9T2CE4-vX-w50QcAR_ovymBRKFZeCR-YcP06oRmtDN31qf2wm2habfhGWE3xfD-qD5n8n1AzfNl8I9Qobk6r9ld5YRorhdMqCnKsKYsIkQ8NFT1Ko9xZwc8YvKRkjiCCWd3Ytvr4fiOleo43EfzEhE9PUH6Wvsy3SW04j6wMWc7NsmaHBslaxKkfgyM_YNGPfvhLzbDxhRMpPxdGnSOIb2fYcpmaV5qtBGphEE-O31PcPudtDBfx1tWsMIL3k2X8xplcgd2EqOgLpU-dNk73_r8kBiS84vnfmfAdd4NVauFFFBEL0YEuEjmq5z7Mt2ZpZvz8gQocHtweTD4-Hme_8dxcZDEPXoM0lfkgV5SQsYZimGQHFwV3o6O5AIXL9PtZPbHLjPiFAqPrs2OpYNgVpysGwDsatQq_FRXDr-4VqWxC5w61q8LUbVIypbb54RdIADWKFvFV2dPcqyO6nGqZW60jyX_MNp2lXwugofRe4Pag2I7ZZFVl-dAnsbe6uZH9rwfaVScv-r7WhO8fwtdXt8mF21AUuqSs8QX2Cpp1Wvz5RzVsTLadqS4gmsH-qvOlsli9gBob4r3slZT_0RuECFR4amxElFFAQ_-fsJ8_YP_awWHynpfvgC4sdvXlRDibjmuAtRkQJx7aPT3239rzPSnZ5g-qams_32WLQgivfIWr8XEaN-R2ftM5_PRGY2avSniuphO31XL0BfZ6gaomzxfKHd40RBXIyjy0lmdRq38sWimUB5yIxF41_5OLPCAnl9ThSnH-imTMODxz1wKRmmoy9vWOKkbiNs37LFRrHb1tLc65rub412zzrckN_tKURs3dVpOvefDD9fbp0ksWMLIZA91PeXZdrYroeU_o0tccIuV4hSDJUrYXbLWklodNO09T7FIsgREHEgO_kS72sfR6gvAa_OCAhETyBlCaDpe7lWqsL2Wg8nbzckKc7tIyEZI-1rs6ZCOFAH3wQ6Kwtk0kahzqbpZKlloDGs4IFl0HJnxkLbU0Qxhj75EepXIi3cecA_tPwmBC8ny6SAdSiEnH7bgVCo0aZHmw4oA7s0-y3vGpxeGXqJnG_3orXuWTU1bEbK3oHc5Ogc8lOj0uJOujpA-1hQb7-Xfw1pfK72wxiEPsPi1Yf2qKWrG-z5keDDvVxqVbplCTPRG5BRRzEcKozIIvXnNdPvP7HQ2GPvuyewZFPxyAff-cFRt5qDfUk4XyNOLgs2AP09vTYqkxhDIUkmwXPyb94lph9VS0DOXmWRbFCij2ef7JaeZh2oD7nvt93Cs-IroadsTmrJO_xult-bkNV_-Uhe4vCWdGCR74k7R6Ve-IxJrYvVK4KjiiYJuNKK9W-56TR1qKtt2JmsxOfb3EadFSP_b8KFH-b39obTqJJSPTe1uhxSYe2aNGoLZ9ws-bTdBqEqamLVPsVImS7l6D_YOJr7E7ujRZiYBClNz37Ueggua81SY2Coyd0q2vNHz0UTtlPkmF6pg-E; language=bg; _ga=GA1.2.626026729.1505554093; _gid=GA1.2.1202564038.1508767993
+
+
+https://www.wikipedia.org/
+
+Response headers:
+accept-ranges:bytes
+age:52617
+backend-timing:D=252 t=1509129401706143
+cache-control:s-maxage=86400, must-revalidate, max-age=3600
+content-encoding:gzip
+content-length:20059
+content-type:text/html
+date:Sun, 29 Oct 2017 09:13:40 GMT
+etag:W/"151cd-55bea9239c165"
+last-modified:Thu, 19 Oct 2017 18:31:57 GMT
+server:mw1320.eqiad.wmnet
+set-cookie:CP=H2; Path=/; secure
+set-cookie:WMF-Last-Access=29-Oct-2017;Path=/;HttpOnly;secure;Expires=Thu, 30 Nov 2017 00:00:00 GMT
+set-cookie:WMF-Last-Access-Global=29-Oct-2017;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Thu, 30 Nov 2017 00:00:00 GMT
+set-cookie:GeoIP=BG:22:Sofia:42.68:23.32:v4; Path=/; secure; Domain=.wikipedia.org
+status:200
+strict-transport-security:max-age=106384710; includeSubDomains; preload
+vary:Accept-Encoding
+via:1.1 varnish-v4, 1.1 varnish-v4, 1.1 varnish-v4
+x-analytics:WMF-Last-Access-Global=16-Oct-2017;https=1
+x-cache:cp1054 hit/9, cp3043 hit/1, cp3041 hit/507626
+x-cache-status:hit
+x-client-ip:185.155.117.186
+x-varnish:833490115 834604014, 156757758 167774987, 671223341 1002928663
+
+Request headers:
+:authority:www.wikipedia.org
+:method:GET
+:path:/
+:scheme:https
+accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+accept-encoding:gzip, deflate, br
+accept-language:en-US,en;q=0.8
+cookie:WMF-Last-Access-Global=16-Oct-2017
+referer:https://www.google.bg/
+upgrade-insecure-requests:1
+user-agent:Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+
+
+http://php.net/
+
+Response headers:
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.6.2
+Date: Sun, 29 Oct 2017 09:16:09 GMT
+Content-Type: text/html
+Content-Length: 184
+Connection: keep-alive
+Location: http://php.net/
+
+Request headers:
+GET / HTTP/1.1
+Host: www.php.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+Cookie: LAST_NEWS=1509021178; COUNTRY=NA%2C185.155.117.186; LAST_LANG=en
+If-Modified-Since: Thu, 26 Oct 2017 12:10:11 GMT

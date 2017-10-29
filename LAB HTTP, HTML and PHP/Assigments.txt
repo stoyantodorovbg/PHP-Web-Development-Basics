@@ -1,0 +1,54 @@
+LAB: HTTP, HTML and PHP
+This document defines the lab assignments for the "PHP WEB @ Software University.  
+
+
+Problem 1.	Get HTTP Headers for request and response
+?	Use following site list:
+0	http://softuni.bg/
+0	https://www.wikipedia.org/
+0	http://php.net/
+
+Problem 2.	Create HTTP Headers for codes
+?	Create 4 php file that send custom HTTP Headers for following statuses:
+0	404
+0	500
+0	200
+0	301
+
+Problem 3.	Create HTTP Headers for content-type
+?	Create 4 php file that send custom HTTP Headers for following content-types:
+0	text/html
+0	plain/text
+0	image/jpg
+0	application/json
+
+Problem 4.	Create HTML page 
+Create HTML file with following structure:
+?	header
+0	title
+0	charset
+?	body
+0	Big title
+0	Some text
+0	One image
+0	One table with 3 columns and 4 rows
+
+
+
+Problem 5.	Create HTML Form
+Create HTML page with following form elements:
+?	text 
+?	select with 4 option
+?	select with 8 option in 2 groups
+?	3 checkbox
+?	4 radio buttons in 2 groups
+?	datepicker
+?	colorpicker
+?	textarea
+?	email
+?	range
+?	submit button
+Place the element in a table and add text labels around them for good user experience 
+
+
+

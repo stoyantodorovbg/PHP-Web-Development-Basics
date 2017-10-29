@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+
+<form action="get_data.php" method="post">
+    <label>text:</label>
+    <input type="text" name="text">
+    <br/><br/>
+    <label>select with 4 option:</label>
+    <select name="select">
+        <option value="first">First</option>
+        <option value="second">Second</option>
+        <option value="third">Third</option>
+        <option value="fourth">Fourth</option>
+    </select>
+    <br/><br/>
+    <label>select with 8 option in 2 groups:</label>
+    <select name="select">
+        <optgroup label="First group">
+        <option value="first-first">First-first</option>
+        <option value="second-first">Second-first</option>
+        <option value="third-first">Third-first</option>
+        <option value="fourth-first">Fourth-first</option>
+        </optgroup>
+        <optgroup label="Second group">
+            <option value="first-second">First-second</option>
+            <option value="second-second">Second-second</option>
+            <option value="third-second">Third-second</option>
+            <option value="fourth-second">Fourth-second</option>
+        </optgroup>
+    </select>
+    <br/><br/>
+    <label>3 checkbox:</label>
+    <br/>
+    <label>first :</label>
+    <input type="checkbox" name="first">
+    <br/>
+    <label>second :</label>
+    <input type="checkbox" name="second">
+    <br/>
+    <label>third :</label>
+    <input type="checkbox" name="third">
+    <br/><br/>
+    <label>4 radio buttons in 2 groups:</label>
+    <br/>
+    <label>first group :</label>
+    <fieldset id="first_group">
+        <label>first :</label>
+        <input type="radio" name="first">
+        <label>second :</label>
+        <input type="radio"name="second">
+    </fieldset>
+    <br/>
+    <label>second group :</label>
+    <fieldset id="second_group">
+        <label>third :</label>
+        <input type="radio" name="third">
+        <label>fourth :</label>
+        <input type="radio" name="fourth">
+    </fieldset>
+    <br/><br/>
+    <label>datepicker:</label>
+    <input type="date" name="date">
+    <br/><br/>
+    <label>colorpicker:</label>
+    <input type="color" name="favcolor">
+    <br/><br/>
+    <label>textarea:</label>
+    <input type="textarea" name="textarea">
+    <br/><br/>
+    <label>email:</label>
+    <input type="email", name="email">
+    <br/><br/>
+    <label>range:</label>
+    <input type="range" name="range" min="0" max="10">
+    <br/><br/>
+    <label>submit buttonTe:</label>
+    <input type="submit" name="submit", value="Submit">
+
+
+</form>
+
+</body>
+</html>
