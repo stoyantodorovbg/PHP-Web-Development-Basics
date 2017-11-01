@@ -15,3 +15,8 @@ include "model/CustomersModel.php";
 include "controller/MyController.php";
 $main = new MyController($db);
 $main->main();
+?>
+
+
+
+

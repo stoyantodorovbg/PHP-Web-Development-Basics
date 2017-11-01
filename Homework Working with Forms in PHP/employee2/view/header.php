@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Car Sales App</title>
+		<title>Change the Title</title>
 		<link href="view/style.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>

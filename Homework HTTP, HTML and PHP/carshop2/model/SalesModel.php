@@ -4,8 +4,24 @@ class SalesModel extends Model{
 	private $amount;
 	private $car_id;
 	private $customer_id;
-	
-	public function create()
+
+    /**
+     * SalesModel constructor.
+     * @param $amount
+     * @param $car_id
+     * @param $customer_id
+     */
+    public function __construct($db, $date_time, $amount, $car_id, $customer_id)
+    {
+        parent::__construct($db);
+        $this->date_time = $date_time;
+        $this->amount = $amount;
+        $this->car_id = $car_id;
+        $this->customer_id = $customer_id;
+    }
+
+
+    public function create()
 	{
         // Insert into sales
 		try{
@@ -27,15 +43,13 @@ class SalesModel extends Model{
         }
         return false;
 	}
-	// Todo - problem 1
-    // Modifications to create()
 	
 	public function readAll()
 	{
         try {
             $stmt = $this->db->prepare("
               SELECT *         
-                FROM `deal`");
+                FROM `deal_`");
             $stmt->execute();
             $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return ($all);
