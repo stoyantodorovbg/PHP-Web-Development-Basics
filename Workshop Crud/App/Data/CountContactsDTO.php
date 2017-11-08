@@ -4,7 +4,7 @@
 namespace App\Data;
 
 
-class CountUserDTO
+class CountContactsDTO
 {
     private $count;
 

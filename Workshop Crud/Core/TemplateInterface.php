@@ -5,5 +5,5 @@ namespace Core;
 
 interface TemplateInterface
 {
-    public function render(string $templateName, $data);
+    public function render(string $templateName, $data, $count);
 }
