@@ -18,6 +18,7 @@
     <input type="submit" name="editProfile" value="Edit Profile">
 </form>
 
-You can <a href="logout.php">log out</a>
- or view <a href="allUsers.php">all users</a>
+You can <a href="logout.php">log out</a>,
+<a href="addEmail.php">add email</a>
+ or view <a href="allUsers.php?p=1">all users</a>
 

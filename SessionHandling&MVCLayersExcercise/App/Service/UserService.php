@@ -91,4 +91,18 @@ class UserService implements UserServiceInterface
     {
         return $this->userRepository->findAll();
     }
+
+    /**
+     * @return \Generator|UserDTO[]
+     */
+    public function getCountUsers(): \Generator
+    {
+        return $this->userRepository->countUsers();
+    }
+
+    public function viewPerPage(int $page): \Generator
+    {
+        $start = $page * 3;
+        return $this->userRepository->findByPages($start, 3);
+    }
 }

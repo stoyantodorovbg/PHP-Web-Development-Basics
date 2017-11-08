@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Data\UserDTO;
+use App\Data\CountUserDTO;
 use Database\DatabaseInterface;
 
 class UserRepository implements UserRepositoryInterface
@@ -112,6 +113,32 @@ class UserRepository implements UserRepositoryInterface
         `last_name` AS `lastName`,
         `born_on` AS `bornOn`
         FROM `users`
+        LIMIT 3
+        ")
+            ->execute()->fetch(UserDTO::class);
+    }
+
+    public function countUsers(): \Generator
+    {
+        return $this->db->query("
+        SELECT COUNT(*) AS `count`
+        FROM `users`
+        ")
+            ->execute()->fetch(CountUserDTO::class);
+    }
+
+    public function findByPages(int $start, int $perPage): \Generator
+    {
+        return $this->db->query("
+        SELECT
+        `user_id` AS `id`,
+        `username`, 
+        `password`, 
+        `first_name` AS `firstName`,
+        `last_name` AS `lastName`,
+        `born_on` AS `bornOn`
+        FROM `users`
+        LIMIT ".$start.",".$perPage."
         ")
             ->execute()->fetch(UserDTO::class);
     }

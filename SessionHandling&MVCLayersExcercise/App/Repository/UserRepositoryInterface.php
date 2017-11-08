@@ -18,4 +18,14 @@ interface UserRepositoryInterface
      * @return \Generator|UserDTO[]
      */
     public function findAll(): \Generator;
+
+    /**
+     * @return \Generator|UserDTO[]
+     */
+    public function countUsers(): \Generator;
+
+    /**
+     * @return \Generator|UserDTO[]
+     */
+    public function findByPages(int $start, int $count): \Generator;
 }

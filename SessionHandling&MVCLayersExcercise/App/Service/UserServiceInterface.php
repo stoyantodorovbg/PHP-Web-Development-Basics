@@ -16,4 +16,8 @@ interface UserServiceInterface
     public function update(UserDTO $userData):bool;
 
     public function viewAll(): \Generator;
+
+    public function getCountUsers(): \Generator;
+
+    public function viewPerPage(int $page): \Generator;
 }
