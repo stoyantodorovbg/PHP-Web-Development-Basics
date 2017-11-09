@@ -102,29 +102,15 @@ class UserRepository implements UserRepositoryInterface
         return true;
     }
 
-    public function findAll(): \Generator
-    {
-        return $this->db->query("
-        SELECT
-        `user_id` AS `id`,
-        `username`, 
-        `password`, 
-        `first_name` AS `firstName`,
-        `last_name` AS `lastName`,
-        `born_on` AS `bornOn`
-        FROM `users`
-        LIMIT 3
-        ")
-            ->execute()->fetch(UserDTO::class);
-    }
-
-    public function countUsers(): \Generator
+    public function countUsers(): ?CountUserDTO
     {
         return $this->db->query("
         SELECT COUNT(*) AS `count`
         FROM `users`
         ")
-            ->execute()->fetch(CountUserDTO::class);
+            ->execute()
+            ->fetch(CountUserDTO::class)
+            ->current();
     }
 
     public function findByPages(int $start, int $perPage): \Generator
@@ -140,6 +126,7 @@ class UserRepository implements UserRepositoryInterface
         FROM `users`
         LIMIT ".$start.",".$perPage."
         ")
-            ->execute()->fetch(UserDTO::class);
+            ->execute()
+            ->fetch(UserDTO::class);
     }
 }

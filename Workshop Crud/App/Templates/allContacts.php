@@ -1,5 +1,7 @@
-<?php /** @var \App\Data\ContactDTO[] $data */
-/** @var int $count */?>
+<?php
+/** @var \App\Data\ContactDTO[] $data */
+/** @var int $count */
+?>
 
 <h1>Contacts</h1>
 
@@ -22,11 +24,18 @@
     </tbody>
 </table>
 <br/>
-
+<a href="contacts.php">1</a>
 <?php $lastPage = $count % 3;
-for ($e = 0, $i = 4; $i < $count; $i += 2, $e++){ ?>
-    <a href="contacts.php?p=<?= $e ?>"><?= $e + 1?></a>
-<?php } ?>
+if ($lastPage = 1) {
+for ($e = 0, $i = 4; $i <= $count; $i += 3, $e++){ ?>
+    <a href="contacts.php?p=<?= $e + 1 ?>"><?= $e + 2?></a>
+<?php }
+} else {
+    for ($e = 0, $i = 4; $i < $count; $i += 3, $e++) { ?>
+        <a href="contacts.php?p=<?= $e + 1 ?>"><?= $e + 1 ?></a>
+    <?php }
+}?>
+
 
 <br/><br/>
 <a href="createContact.php">Add contact</a>

@@ -58,14 +58,15 @@ class UserHttpHandler extends AbstractHttpHandler
 
     public function all(UserServiceInterface $userService, array $getData)
     {
-        $countUsersDto = $userService->getCountUsers();
-        $count = 0;
-        foreach ($countUsersDto as $i => $iv) {
-            $count = intval($iv->getCount());
-        }
+        $countUserDTO = $userService->getCountUsers();
+        $count = $countUserDTO->getCount();
 
-            $users = $userService->viewPerPage($getData['p']);
-            $this->render('user/users', [$users, $count]);
+        if (isset($getData['p'])) {
+            $contacts = $userService->viewPerPage($getData['p']);
+        } else {
+            $contacts = $userService->viewPerPage(0);
+        }
+        $this->render('user/users', $contacts, $count);
 
 
     }

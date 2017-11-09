@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Data\CountUserDTO;
 use App\Data\UserDTO;
 use App\Repository\UserRepositoryInterface;
 
@@ -87,15 +88,7 @@ class UserService implements UserServiceInterface
     /**
      * @return \Generator|UserDTO[]
      */
-    public function viewAll(): \Generator
-    {
-        return $this->userRepository->findAll();
-    }
-
-    /**
-     * @return \Generator|UserDTO[]
-     */
-    public function getCountUsers(): \Generator
+    public function getCountUsers(): ?CountUserDTO
     {
         return $this->userRepository->countUsers();
     }

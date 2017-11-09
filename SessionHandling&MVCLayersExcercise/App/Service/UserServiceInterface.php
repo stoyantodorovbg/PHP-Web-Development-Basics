@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Data\CountUserDTO;
 use App\Data\UserDTO;
 
 interface UserServiceInterface
@@ -15,9 +16,7 @@ interface UserServiceInterface
 
     public function update(UserDTO $userData):bool;
 
-    public function viewAll(): \Generator;
-
-    public function getCountUsers(): \Generator;
+    public function getCountUsers(): ?CountUserDTO;
 
     public function viewPerPage(int $page): \Generator;
 }

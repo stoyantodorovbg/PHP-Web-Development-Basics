@@ -28,9 +28,9 @@ abstract class AbstractHttpHandler
         $this->dataBinder = $dataBinder;
     }
 
-    public function render(string $templateName, $data = null)
+    public function render(string $templateName, $data = null, $count = null)
     {
-        return $this->template->render($templateName, $data);
+        return $this->template->render($templateName, $data, $count);
     }
 
     public function redirect($url)

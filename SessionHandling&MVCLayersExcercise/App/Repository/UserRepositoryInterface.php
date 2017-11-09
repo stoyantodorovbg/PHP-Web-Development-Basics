@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Data\CountUserDTO;
 use App\Data\UserDTO;
 
 interface UserRepositoryInterface
@@ -17,12 +18,7 @@ interface UserRepositoryInterface
     /**
      * @return \Generator|UserDTO[]
      */
-    public function findAll(): \Generator;
-
-    /**
-     * @return \Generator|UserDTO[]
-     */
-    public function countUsers(): \Generator;
+    public function countUsers(): ?CountUserDTO;
 
     /**
      * @return \Generator|UserDTO[]
