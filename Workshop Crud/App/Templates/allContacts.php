@@ -26,13 +26,13 @@
 <br/>
 <a href="contacts.php">1</a>
 <?php $lastPage = $count % 3;
-if ($lastPage = 1) {
+if ($lastPage == 1) {
 for ($e = 0, $i = 4; $i <= $count; $i += 3, $e++){ ?>
-    <a href="contacts.php?p=<?= $e + 1 ?>"><?= $e + 2?></a>
+   |<a href="contacts.php?p=<?= $e + 1 ?>"><?= $e + 2?></a>
 <?php }
 } else {
     for ($e = 0, $i = 4; $i < $count; $i += 3, $e++) { ?>
-        <a href="contacts.php?p=<?= $e + 1 ?>"><?= $e + 1 ?></a>
+        |<a href="contacts.php?p=<?= $e + 1 ?>"><?= $e + 1 ?></a>
     <?php }
 }?>
 
